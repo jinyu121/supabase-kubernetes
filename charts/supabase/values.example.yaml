@@ -47,7 +47,7 @@ studio:
 
 auth:
   image:
-    tag: v2.143.0
+    tag: v2.180.0
   environment:
     API_EXTERNAL_URL: http://example.com
     GOTRUE_SITE_URL: http://example.com
@@ -60,11 +60,11 @@ auth:
 
 rest:
   image:
-    tag: v12.0.1
+    tag: v13.0.7
 
 realtime:
   image:
-    tag: v2.27.5
+    tag: v2.57.2
   livenessProbe:
     httpGet:
       path: /
@@ -73,11 +73,11 @@ realtime:
 
 meta:
   image:
-    tag: v0.80.0
+    tag: v0.93.1
 
 storage:
   image:
-    tag: v0.46.4
+    tag: v1.28.2
   livenessProbe:
     httpGet:
       path: /status
@@ -124,7 +124,7 @@ kong:
 
 analytics:
   image:
-    tag: 1.4.0
+    tag: 1.22.6
   livenessProbe:
     httpGet:
       path: /health
@@ -152,4 +152,4 @@ vector:
 
 functions:
   image:
-    tag: v1.41.2
+    tag: v1.69.15
