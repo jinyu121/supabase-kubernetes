@@ -10,7 +10,7 @@ secret:
     username: supabase
     password: this_password_is_insecure_and_should_be_updated
   db:
-    username: postgres
+    username: supabase_admin
     password: example123456
     database: postgres
   analytics:
@@ -19,7 +19,7 @@ secret:
 db:
   enabled: true
   image:
-    tag: 15.1.0.147
+    tag: 17.6.1.037
   livenessProbe:
     exec:
       command:
@@ -32,15 +32,16 @@ db:
 
 studio:
   image:
-    tag: 20240326-5e5586d
+    tag: 2025.11.03-sha-ddedae5
   environment:
+    HOSTNAME: "::"
     STUDIO_DEFAULT_ORGANIZATION: "My Organization"
     STUDIO_DEFAULT_PROJECT: "My Project"
     SUPABASE_PUBLIC_URL: http://example.com/
     NEXT_PUBLIC_ENABLE_LOGS: "true"
   livenessProbe:
     httpGet:
-      path: /api/profile
+      path: /api/platform/profile
       port: 3000
     initialDelaySeconds: 3
 
